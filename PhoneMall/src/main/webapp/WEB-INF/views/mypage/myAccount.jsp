@@ -13,7 +13,10 @@
                                 <h1 class="breadcrumbs-title">My Account</h1>
                                 <ul class="breadcrumb-list">
                                     <li><a href="/">Home</a></li>
-                                    <li>My Account</li>
+                                    <li><a href="/myPurchase">Purchase</a></li>
+                                    <li><a href="/myInfo">MyInfo</a></li>
+                                    <li><a href="/myReviews">Reviews</a></li>
+                                    <li><a href="/myCoupon">MyCoupons</a></li>
                                 </ul>
                             </div>
                         </div>

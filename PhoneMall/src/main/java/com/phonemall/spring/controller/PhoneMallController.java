@@ -31,9 +31,9 @@ public class PhoneMallController {
 		return "/mallView/contact";
 	}
 	
-	@RequestMapping("/myAccount")
+	@RequestMapping("/myPurchase")
 	public String toMyAccount() {
-		return "/mypage/myAccount";
+		return "/mypage/myPurchase";
 	}
 	
 	@RequestMapping("/wishList")
@@ -54,5 +54,10 @@ public class PhoneMallController {
 	@RequestMapping("/checkOut")
 	public String toCheckOut() {
 		return "/mypage/checkOut";
+	}
+	
+	@RequestMapping("/myInfo")
+	public String toMyInfo() {
+		return "/mypage/myInfo";
 	}
 }
