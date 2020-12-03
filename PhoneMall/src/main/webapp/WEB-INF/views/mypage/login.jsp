@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="/WEB-INF/views/layout/top.jsp" %>
 
  <!-- BREADCRUMBS SETCTION START -->
@@ -33,13 +33,16 @@
                         <div class="col-md-6">
                             <div class="registered-customers">
                                 <h6 class="widget-title border-left mb-50">REGISTERED CUSTOMERS</h6>
-                                <form action="#">
+                                <form method="post" action="/login">
                                     <div class="login-account p-30 box-shadow">
                                         <p>If you have an account with us, Please log in.</p>
-                                        <input type="text" name="name" placeholder="Email Address">
+                                        <h1><c:out value = "${error}"/></h1>
+                                        <h2><c:out value = "${logout}"/></h2>
+                                        <input type="text" name="username" placeholder="UserName">
                                         <input type="password" name="password" placeholder="Password">
                                         <p><small><a href="#">Forgot our password?</a></small></p>
                                         <button class="submit-btn-1 btn-hover-1" type="submit">login</button>
+                                        <input type="hidden" name="${_csrf.parameterName}" value="${_crsf.token}"  />
                                     </div>
                                 </form>
                             </div>
