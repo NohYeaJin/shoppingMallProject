@@ -34,4 +34,9 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+   		<property name="basePackage" value="com.phonemall.spring.*" />
+    	<property name="annotationClass" value="com.phonemall.spring.configure.Mapper" />
+	</bean>
+
 </beans>
