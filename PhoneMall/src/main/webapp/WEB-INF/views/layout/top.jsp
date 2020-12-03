@@ -58,9 +58,9 @@
                             <div class="top-link clearfix">
                                 <ul class="link f-right">
                                     <li>
-                                        <a href="/myAccount">
+                                        <a href="/myPurchase">
                                             <i class="zmdi zmdi-account"></i>
-                                            My Account
+                                            MyPage
                                         </a>
                                     </li>
                                     <li>
