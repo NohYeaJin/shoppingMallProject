@@ -49,32 +49,6 @@ public class PhoneMallController {
 		return "/mypage/wishList";
 	}
 	
-	@RequestMapping("/login")
-	public String toLoginPage() {
-		return "/mypage/login";
-	}
-	
-	
-	//@GetMapping("/login")
-
-	public void loginInput(String error,String logout, Model model) {
-		
-		log.info("error: " + error);
-		log.info("logout: " + logout);
-		
-		if(error!=null) {
-			model.addAttribute("error","Login Error Check Your Account");
-			
-		}
-		
-		if(logout!=null) {
-			model.addAttribute("logout","Lougout!!");
-		}
-	}
-	
-
-
-	
 	@RequestMapping("/viewCart")
 	public String toViewCart() {
 		return "/mypage/viewCart";
@@ -93,5 +67,10 @@ public class PhoneMallController {
 	@RequestMapping("/myInquiry")
 	public String toMyInquiry() {
 		return "/mypage/myInquiry";
+	}
+	
+	@RequestMapping("/errorpage")
+	public String toErrorPage() {
+		return "/other/errorpage";
 	}
 }

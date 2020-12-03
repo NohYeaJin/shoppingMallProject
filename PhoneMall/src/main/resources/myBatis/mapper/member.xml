@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="myBatis.mapper.member"></mapper>
+<mapper namespace="com.phonemall.spring.dao.MemberMapper">
+	
+	<select id="selectMem" resultType="MemberVO" parameterType="String">
+		select * from user_info where id=#{value}
+	</select>
+	
+	<insert id="insertMember" parameterType="MemberVO">
+		insert into user_info values 
+		(#{id}, #{name}, #{password}, #{email}, #{address}, #{phoneNum})
+	</insert>
+	
+	<select id="selectUserAuthOne" parameterType="String" resultType="String">
+		select authority from user_auth where id=#{value}
+	</select>
+	
+	<insert id="inserUserAuthDefault" parameterType="String">
+		insert into user_auth
+		values (#{id},'ROLE_USER')
+	</insert>
+</mapper>
